@@ -4,10 +4,15 @@
 
 using namespace std;
 
-void updateStudentInfo(student **head , const string name)
+void updateStudentInfo(Student **head , const string targetName)
 {
+
+    int choice,respond;
+    respond = 1; 
+
      // Traverse the linked list to find the target node
-    Student* current = head;
+    Student* current = *head;
+
     while (current != NULL && current->firstName != targetName) {
         current = current->next;
     }
@@ -32,8 +37,7 @@ void updateStudentInfo(student **head , const string name)
 
     do {
 
-    int choice,respond;
-    respond = 1;
+    
     char answer;
     cout << "Enter your choice: ";
     cin >> choice;
@@ -99,7 +103,7 @@ void updateStudentInfo(student **head , const string name)
 
     cout << "student information updated successfully." << endl;
     cout <<"would you like to update another information? (y/n) :" ; 
-    cin<<answer;
+    cin>>answer;
     if(answer == "y" || answer == "Y")
        respond = 0;
 

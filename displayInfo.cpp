@@ -2,9 +2,9 @@
 #include <string>
 #include "student.h"
 
-using namespace std;
+using namespace std; 
 
-void displayLinkedList(Student* head)
+void displayInfo(Student *head)
  {
     // Check if the linked list is empty
     if (head == NULL) {

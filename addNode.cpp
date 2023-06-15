@@ -7,7 +7,7 @@ using namespace std;
 void addNodeAtBeginning(Student **head)
  {
     // Create a new node
-    Student* newStudent = new Student;
+    Student *newStudent = new Student();
 
     // Fill in the data for the new node
     fillNodeData(newStudent);
@@ -18,7 +18,7 @@ void addNodeAtBeginning(Student **head)
     // Update the head pointer to point to the new node
     head = newStudent;
 }
-
+/*
 
 void addNodeToEnd(Student** headRef)
  {
@@ -118,3 +118,4 @@ void addNodeAfter(Student** headRef, const string& targetName)
     current->next = newNode;
 }
 
+*/

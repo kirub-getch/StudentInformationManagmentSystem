@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include "student.h"
 
 using namespace std;
 
@@ -16,14 +17,14 @@ struct Student {
     string phoneNumber;
     string department;
     double grade;
-    Student* next;
+    Student  *next;
 
     // Constructor
-    Student(string first, string middle, string last, int studentId,
+    /*Student(string first, string middle, string last, int studentId,
             string studentBatch, string email, string phone, string dept, double studentGrade)
         : firstName(move(first)), middleName(move(middle)), lastName(move(last)),
           id(studentId), batch(move(studentBatch)), emailAddress(move(email)), phoneNumber(move(phone)),
-          department(move(dept)), grade(studentGrade), next(nullptr) {}
+          department(move(dept)), grade(studentGrade), next(nullptr) {}*/
 };
 
 //adds a student to the beginning of the list of students
@@ -42,10 +43,10 @@ void addNodeToEnd(Student** headRef);
  void fillNodeData(Student* newNode);
 
  //Updates any information the user wants to change
- void updateStudentInfo(student **head , const string name);
+ void updateStudentInfo(Student **head , const string name);
 
  //displays all the information in the linked list
- void displayLinkedList(Student* head);
+ void displayInfo(Student *head);
 
  //deletes the first student from the list of students
 void deleteFirstStudent(Student** headRef);
