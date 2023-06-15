@@ -82,4 +82,5 @@ void searchByEmail(Student *head, const string& targetEmail);
 void searchByPhone(Student *head, const string& targetPhone);
 
 
-
+//sorts the list alphabeticaly
+void sort(Student** head);

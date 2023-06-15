@@ -10,10 +10,10 @@ int main()
     static int choice;
     static string targetName;
 
-    Student*s1 = new Student{"kirub","getch","wondwosen","1303195","2013","kirub@gmail.com","0930630075","comp_eng",3.6,NULL};
-     Student*s2 = new Student{"sofi","getch","wondwosen","1303195","2013","kirub@gmail.com","0930630075","comp_eng",3.6,NULL};
-     Student*s3 = new Student{"raki","getch","wondwosen","1303195","2013","kirub@gmail.com","0930630075","comp_eng",3.6,NULL};
-     Student*s4 = new Student{"nigist","getch","wondwosen","1303195","2013","kirub@gmail.com","0930630075","comp_eng",3.6,NULL};
+    Student*s1 = new Student{"kirub","getch","wondwosen","1303191","2013","kirub@gmail.com","0930630075","comp_eng",3.6,NULL};
+     Student*s2 = new Student{"sofi","getch","wondwosen","1303192","2013","kirub@gmail.com","0930630075","comp_eng",3.6,NULL};
+     Student*s3 = new Student{"raki","getch","wondwosen","1303193","2013","kirub@gmail.com","0930630075","comp_eng",3.6,NULL};
+     Student*s4 = new Student{"nigist","getch","wondwosen","1303194","2013","kirub@gmail.com","0930630075","comp_eng",3.6,NULL};
      Student*s5 = new Student{"kal","getch","wondwosen","1303195","2013","kirub@gmail.com","0930630075","comp_eng",3.6,NULL};
     head = s1; 
     s1->next = s2;
