@@ -4,6 +4,54 @@
 
 using namespace std;
 
+void deleteStudent(Student **head)
+{
+    Student **start = head;
+    static int choice ;
+    static string targetName;
+
+    cout<< "At which position would you like to delete the student : \n";
+    cout<<"1.Delete first student \n";
+    cout<<"2.Delete last student\n";
+    cout<<"3.Delete a specific student\n";
+    cout<<"4.Delete all student\n";
+    cout<<"5.**Exit** \n";
+
+   cout<<"Enter operatin to be performed by index :";
+   cin >> choice;
+
+   switch (choice){
+    case 1:
+    {
+        deleteFirstStudent(start);
+        break;
+    }
+    case 2:
+    {
+        deleteLastStudent(start);
+        break;
+    }
+    case 3:
+    {
+        cout<<"Enter name of student you wanna delete:";
+        cin>> targetName;
+        deleteStudent(start,targetName);
+        break;
+    }
+    case 4:
+    {
+      
+      deleteAll(start);
+      break;
+    }
+    case 5:
+    {
+        return ;
+    }
+   }
+
+}
+
 void deleteFirstStudent(Student** headRef) {
     // Check if the linked list is empty
     if (*headRef == NULL) {
@@ -91,5 +139,27 @@ void deleteStudent(Student** headRef, const string& targetName) {
     // Delete the target Student
     delete current;
 
-    cout << "Student deleted successfully." << endl;
+    cout << "Student "<<targetName<<" deleted successfully." << endl;
+}
+void deleteAll(Student **head)
+{
+
+    Student *temp , *temp2;
+
+    if (*head == NULL)
+       cout<<"List is empty";
+
+    else
+    {
+        temp = *head;
+        temp2 = NULL;
+        while(temp->next!= NULL)
+        {
+            temp2 = temp;
+            temp = temp->next;
+            delete temp2;
+        }
+        delete temp;
+        *head = NULL;
+    }
 }

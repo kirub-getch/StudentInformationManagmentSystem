@@ -16,16 +16,34 @@ void displayInfo(Student *head)
      Student* current = head;
      while (current != NULL)
       {
-        string fullName = current->firstName + " " + current->middleName " " +  "" current->lastName;
-        cout << "Full Name: " << fullName<< endl;
+        string fullName = current->firstName + " " + current->middleName + " " +  "" + current->lastName;
+        cout << "\nFull Name: " << fullName<< endl;
         
         cout << "ID: " << current->id << endl;
-        cout << noskipws << "\tBatch: " << current->batch <<;
+        cout << "Batch: " << current->batch << endl;
         cout << "Email Address: " << current->emailAddress << endl;
+        cout << "phone Number: " << current->phoneNumber << endl;
         cout << "Department: " << current->department << endl;
-        cout << noskipws <<"\tGrade: " << current->grade << endl;
+        cout << "Grade: " << current->grade << endl;
         cout << endl;
 
         current = current->next;
     }
+}
+
+void singleDisplay(Student *head)
+{
+
+    Student* current = head;
+    
+    string fullName = current->firstName + " " + current->middleName + " " +  "" + current->lastName;
+        cout << "\nFull Name: " << fullName<< endl;
+        
+        cout << "ID: " << current->id << endl;
+        cout << "Batch: " << current->batch << endl;
+        cout << "Email Address: " << current->emailAddress << endl;
+        cout << "phone Number: " << current->phoneNumber << endl;
+        cout << "Department: " << current->department << endl;
+        cout << "Grade: " << current->grade << endl;
+        cout << endl;
 }

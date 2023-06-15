@@ -6,8 +6,7 @@ using namespace std;
 
 void fillNodeData(Student* newNode)
  {
-    cin.ignore(); // Ignore the newline character
-
+    
     cout << "First Name: ";
     getline(cin, newNode->firstName);
 

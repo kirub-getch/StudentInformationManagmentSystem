@@ -6,8 +6,10 @@ using namespace std;
 
 void updateStudentInfo(Student **head , const string targetName)
 {
-
+    static string answer;
     int choice,respond;
+
+
     respond = 1; 
 
      // Traverse the linked list to find the target node
@@ -34,12 +36,11 @@ void updateStudentInfo(Student **head , const string targetName)
     cout << "7. Department" << endl;
     cout << "8. Grade" << endl;
     cout << "9. update all" << endl;
+    cout<<"10.**Exit** \n";
 
     do {
 
-    
-    char answer;
-    cout << "Enter your choice: ";
+    cout << "\nEnter your choice: ";
     cin >> choice;
     cin.ignore();
     if(choice == 9)
@@ -96,15 +97,23 @@ void updateStudentInfo(Student **head , const string targetName)
             cin.ignore();
             break;
         }
+        
+        case 10:
+        {
+        return ;
+        }
+
         default:
             cout << "Invalid choice." << endl;
             return;
     }
 
     cout << "student information updated successfully." << endl;
-    cout <<"would you like to update another information? (y/n) :" ; 
+    cout <<"\nwould you like to update another information? (y/n) :" ; 
+
     cin>>answer;
-    if(answer == "y" || answer == "Y")
+
+    if(answer == "n" || answer == "N")
        respond = 0;
 
     }while(respond);

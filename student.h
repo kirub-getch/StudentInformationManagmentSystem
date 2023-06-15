@@ -11,7 +11,7 @@ struct Student {
     string firstName;
     string middleName;
     string lastName;
-    int id;
+    string id;
     string batch;
     string emailAddress;
     string phoneNumber;
@@ -27,6 +27,8 @@ struct Student {
           department(move(dept)), grade(studentGrade), next(nullptr) {}*/
 };
 
+
+void AddStudent(Student **head);
 //adds a student to the beginning of the list of students
 void addNodeAtBeginning(Student **head);
 
@@ -48,8 +50,18 @@ void addNodeToEnd(Student** headRef);
  //displays all the information in the linked list
  void displayInfo(Student *head);
 
+ //display information of a single student
+ void singleDisplay(Student *head);
+
  //deletes the first student from the list of students
 void deleteFirstStudent(Student** headRef);
+
+
+//
+void deleteStudent(Student **head);
+
+//delets all the students from the list of students
+void deleteAll(Student **head);
 
  //deltes the last student from the list of students
 void deleteLastStudent(Student** headRef);
@@ -60,6 +72,14 @@ void deleteLastStudent(Student** headRef);
  //gets email address and phone number from user and checks if they are in correct format
  string getPhoneNumber();
  string getEmailAddress();
+
+
+//searches for a specific student
+void search(Student *head);
+void searchByName(Student *head, const string& targetName);
+void searchByID(Student *head, const string& targetID);
+void searchByEmail(Student *head, const string& targetEmail);
+void searchByPhone(Student *head, const string& targetPhone);
 
 
 
