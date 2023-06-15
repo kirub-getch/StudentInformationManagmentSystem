@@ -7,14 +7,14 @@ using namespace std;
 void displayLinkedList(Student* head)
  {
     // Check if the linked list is empty
-    if (head == nullptr) {
+    if (head == NULL) {
         cout << "Linked list is empty." << endl;
         return;
     }
 
      // Traverse the linked list and display the data of each node
      Student* current = head;
-     while (current != nullptr)
+     while (current != NULL)
       {
         string fullName = current->firstName + " " + current->middleName " " +  "" current->lastName;
         cout << "Full Name: " << fullName<< endl;
