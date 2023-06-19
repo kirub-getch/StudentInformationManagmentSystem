@@ -49,6 +49,11 @@ void AddStudent(Student **head)
     {
         return ;
     }
+    default:
+    {
+        cout<<"invalid choice\n";
+        return ;
+    }
    }
 
 }
@@ -66,6 +71,8 @@ void addNodeAtBeginning(Student **head)
 
     // Update the head pointer to point to the new node
     *head = newStudent;
+    cout<<"Student successfully added\n";
+    cout<<"\n--------------------------------\n";
 }
 
 
@@ -93,6 +100,8 @@ void addNodeToEnd(Student** headRef)
 
     // Add the new node at the end of the linked list
     current->next = newStudent;
+    cout<<"Student successfully added\n";
+    cout<<"\n--------------------------------\n";
 }
 
 
@@ -127,11 +136,13 @@ void addNodeBefore(Student** headRef, const string& targetName)
     if (current->next != NULL) {
         newStudent->next = current->next;
         current->next = newStudent;
+        cout<<"Student successfully added\n";
     } 
     else {
         cout << "Target node not found in the linked list." << endl;
         delete newStudent;
     }
+    cout<<"\n--------------------------------\n";
 }
 
 void addNodeAfter(Student** headRef, const string& targetName) 
@@ -156,14 +167,16 @@ void addNodeAfter(Student** headRef, const string& targetName)
     }
 
     // Create a new node
-    Student* newNode = new Student;
+    Student* newstudent = new Student;
 
     // Initialize the data for the new node
     cout << "Enter the details for the new student:\n";
-    fillNodeData(newNode);
+    fillNodeData(newstudent);
 
     // Insert the new node after the target node
-    newNode->next = current->next;
-    current->next = newNode;
+    newstudent->next = current->next;
+    current->next = newstudent;
+    cout<<"Student successfully added\n";
+    cout<<"\n--------------------------------\n";
 }
 

@@ -48,6 +48,11 @@ void deleteStudent(Student **head)
     {
         return ;
     }
+    default:
+    {
+        cout<<"invalid choice \n";
+        return ;
+    }
    }
 
 }
@@ -69,6 +74,7 @@ void deleteFirstStudent(Student** headRef) {
     delete current;
 
     cout << "First Student deleted successfully." << endl;
+    cout<<"\n--------------------------------\n";
 }
 
 void deleteLastStudent(Student** headRef) {
@@ -101,6 +107,7 @@ void deleteLastStudent(Student** headRef) {
     delete current;
 
     cout << "Last Student deleted successfully." << endl;
+    cout<<"\n--------------------------------\n";
 }
 
 void deleteStudent(Student** headRef, const string& targetName) {
@@ -140,6 +147,7 @@ void deleteStudent(Student** headRef, const string& targetName) {
     delete current;
 
     cout << "Student "<<targetName<<" deleted successfully." << endl;
+    cout<<"\n--------------------------------\n";
 }
 void deleteAll(Student **head)
 {
@@ -161,5 +169,6 @@ void deleteAll(Student **head)
         }
         delete temp;
         *head = NULL;
+        cout<<"\n--------------------------------\n";
     }
 }

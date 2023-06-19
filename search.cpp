@@ -53,6 +53,11 @@ void search(Student *head)
     {
       return ;
     }
+    default:
+    {
+        cout<<"invalid choice";
+        return ;
+    }
    }
 
 }
@@ -61,15 +66,17 @@ void searchByName(Student* head, const string& targetName)
  {
     Student* current = head;
 
+
     while (current != nullptr) {
         if (current->firstName == targetName) 
         {
             cout<< targetName << " has been found ..."<< endl;
             singleDisplay(current);
-            return ; 
+            
         }
         current = current->next;
     }
+    cout<<"\n--------------------------------\n";
 }
 
 void searchByID(Student* head, const string& targetID)
@@ -85,6 +92,7 @@ void searchByID(Student* head, const string& targetID)
         }
         current = current->next;
     }
+    cout<<"\n--------------------------------\n";
 }
 
 void searchByEmail(Student* head, const string& targetEmail)
@@ -100,6 +108,7 @@ void searchByEmail(Student* head, const string& targetEmail)
         }
         current = current->next;
     }
+    cout<<"\n--------------------------------\n";
 }
 
 void searchByPhone(Student* head, const string& targetPhone)
@@ -115,4 +124,5 @@ void searchByPhone(Student* head, const string& targetPhone)
         }
         current = current->next;
     }
+    cout<<"\n--------------------------------\n";
 }

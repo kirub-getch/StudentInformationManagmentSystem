@@ -19,14 +19,11 @@ struct Student {
     double grade;
     Student  *next;
 
-    // Constructor
-    /*Student(string first, string middle, string last, int studentId,
-            string studentBatch, string email, string phone, string dept, double studentGrade)
-        : firstName(move(first)), middleName(move(middle)), lastName(move(last)),
-          id(studentId), batch(move(studentBatch)), emailAddress(move(email)), phoneNumber(move(phone)),
-          department(move(dept)), grade(studentGrade), next(nullptr) {}*/
+    
+   
 };
-
+ //
+ extern int choice;
 
 void AddStudent(Student **head);
 //adds a student to the beginning of the list of students
@@ -53,6 +50,9 @@ void addNodeToEnd(Student** headRef);
  //display information of a single student
  void singleDisplay(Student *head);
 
+ //displays how many students are currently in the system
+ void studentCount(Student *head);
+
  //deletes the first student from the list of students
 void deleteFirstStudent(Student** headRef);
 
@@ -69,9 +69,10 @@ void deleteLastStudent(Student** headRef);
  //deltes any student by searching in the list of students
  void deleteStudent(Student** headRef, const string& targetName);
 
- //gets email address and phone number from user and checks if they are in correct format
+ //gets email address , depatment and  phone number from user and checks if they are in correct format
  string getPhoneNumber();
  string getEmailAddress();
+ string getDepartment();
 
 
 //searches for a specific student
@@ -84,3 +85,6 @@ void searchByPhone(Student *head, const string& targetPhone);
 
 //sorts the list alphabeticaly
 void sort(Student** head);
+void sortById(Student** head);
+void sortByName(Student** head);
+void sortByBatch(Student** head);

@@ -6,6 +6,10 @@ using namespace std;
 
 void displayInfo(Student *head)
  {
+
+    cout <<"\n***# Student list #***\n"
+         <<"--------------------------------";
+
     // Check if the linked list is empty
     if (head == NULL) {
         cout << "Linked list is empty." << endl;
@@ -29,6 +33,7 @@ void displayInfo(Student *head)
 
         current = current->next;
     }
+    cout<<"\n--------------------------------\n";
 }
 
 void singleDisplay(Student *head)
@@ -46,4 +51,5 @@ void singleDisplay(Student *head)
         cout << "Department: " << current->department << endl;
         cout << "Grade: " << current->grade << endl;
         cout << endl;
+        cout<<"\n--------------------------------\n";
 }
