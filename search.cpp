@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
 #include "student.h"
+#include <cctype>
+
+#define false 0
+#define true 1
 
 using namespace std;
 
@@ -25,6 +29,10 @@ void search(Student *head)
     {
         cout<<"Enter Name to be searched:";
         cin>> targetName;
+
+         if (!targetName.empty())
+         targetName[0] = toupper(targetName[0]);
+
         searchByName(start,targetName);
         break;
     }
@@ -65,17 +73,24 @@ void search(Student *head)
 void searchByName(Student* head, const string& targetName)
  {
     Student* current = head;
+    bool found = false;
 
 
     while (current != nullptr) {
         if (current->firstName == targetName) 
         {
-            cout<< targetName << " has been found ..."<< endl;
+            cout<< targetName << " \nhas been found ..."<< endl;
             singleDisplay(current);
+            found = true;
             
+        }
+        else if(current->next  == NULL && !found)
+        {
+           cout<<"\n**student not found !**\n";
         }
         current = current->next;
     }
+   
     cout<<"\n--------------------------------\n";
 }
 
@@ -92,6 +107,10 @@ void searchByID(Student* head, const string& targetID)
         }
         current = current->next;
     }
+     if(current == NULL)
+        {
+            cout<<"**student not found !**\n";
+        }
     cout<<"\n--------------------------------\n";
 }
 
@@ -108,6 +127,10 @@ void searchByEmail(Student* head, const string& targetEmail)
         }
         current = current->next;
     }
+    if(current == NULL)
+        {
+            cout<<"**student not found !**\n";
+        }
     cout<<"\n--------------------------------\n";
 }
 
@@ -124,5 +147,9 @@ void searchByPhone(Student* head, const string& targetPhone)
         }
         current = current->next;
     }
+    if(current == NULL)
+        {
+            cout<<"**student not found !**\n";
+        }
     cout<<"\n--------------------------------\n";
 }
