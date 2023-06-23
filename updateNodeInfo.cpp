@@ -35,7 +35,7 @@ void updateStudentInfo(Student **head , const string targetName)
     cout << "6. Email Address" << endl;
     cout << "7. Department" << endl;
     cout << "8. Grade" << endl;
-    cout << "9. update all" << endl;
+    cout << "9. Gender" << endl;
     cout<<"10.**Exit** \n";
 
     do {
@@ -92,12 +92,26 @@ void updateStudentInfo(Student **head , const string targetName)
             break;
         }
         case 8: {
-            cout << "Enter the new Grade: ";
-            cin >> current->grade;
+            cout << "Enter the new CGPA: ";
+            cin >> current->CGPA;
             cin.ignore();
             break;
         }
-        
+        case 9:
+        {
+            cout<<"Gender(Enter M if Male and F if female) :";
+            char sex;
+            cin>>sex;
+            switch(sex)
+            {
+            case 'm':case 'M':
+            {current->gender= MALE;
+            break;}
+            case 'f': case'F':
+            {current->gender=FEMALE;
+            break;}
+           }
+        }
         case 10:
         {
         return ;

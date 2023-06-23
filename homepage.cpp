@@ -81,7 +81,7 @@ int main()
         case 7:
         {
             deleteAll(&head);
-            displayInfo(head);
+            //displayInfo(head);
             return 1;
         }
         default:

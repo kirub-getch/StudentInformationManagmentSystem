@@ -29,9 +29,9 @@ void fillNodeData(Student* newNode)
         newNode->lastName[0] = toupper(newNode->lastName[0]);
     }
 //get gender of student 
-cout<<"Gender(Enter M if Male and F if female";
+cout<<"Gender(Enter M if Male and F if female) :";
 char sex;
-cin>>char;
+cin>>sex;
 switch(sex)
 {
     case 'm':case 'M':
