@@ -23,12 +23,12 @@ void displayInfo(Student *head)
         string fullName = current->firstName + " " + current->middleName + " " +  "" + current->lastName;
         cout << "\nFull Name: " << fullName<< endl;
         
-        cout << "ID: " << current->id << endl;
+        cout << "ID: " << current->id << "\t Gender :"<<(current->gender == MALE ? "M" : "F")<<endl;
         cout << "Batch: " << current->batch << endl;
         cout << "Email Address: " << current->emailAddress << endl;
         cout << "phone Number: " << current->phoneNumber << endl;
         cout << "Department: " << current->department << endl;
-        cout << "Grade: " << current->grade << endl;
+        cout << "CGPA: " << current->CGPA << endl;
         cout << endl;
 
         current = current->next;
@@ -43,13 +43,13 @@ void singleDisplay(Student *head)
     
     string fullName = current->firstName + " " + current->middleName + " " +  "" + current->lastName;
         cout << "\nFull Name: " << fullName<< endl;
+        cout << "ID: " << current->id << "\t Gender :"<<(current->gender == MALE ? "M" : "F")<<endl;
         
-        cout << "ID: " << current->id << endl;
         cout << "Batch: " << current->batch << endl;
         cout << "Email Address: " << current->emailAddress << endl;
         cout << "phone Number: " << current->phoneNumber << endl;
         cout << "Department: " << current->department << endl;
-        cout << "Grade: " << current->grade << endl;
+        cout << "CGPA: " << current->CGPA << endl;
         cout << endl;
         cout<<"\n--------------------------------\n";
 }

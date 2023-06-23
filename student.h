@@ -6,7 +6,7 @@
 
 using namespace std;
 
-
+enum Gender  {MALE,FEMALE};
 struct Student {
     string firstName;
     string middleName;
@@ -16,7 +16,8 @@ struct Student {
     string emailAddress;
     string phoneNumber;
     string department;
-    double grade;
+    double CGPA;
+    Gender gender;
     Student  *next;
 
     

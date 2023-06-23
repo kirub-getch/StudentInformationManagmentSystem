@@ -28,6 +28,20 @@ void fillNodeData(Student* newNode)
      if (!newNode->lastName.empty()) {
         newNode->lastName[0] = toupper(newNode->lastName[0]);
     }
+//get gender of student 
+cout<<"Gender(Enter M if Male and F if female";
+char sex;
+cin>>char;
+switch(sex)
+{
+    case 'm':case 'M':
+    newNode->gender= MALE;
+    break;
+    case 'f': case'F':
+    newNode->gender=FEMALE;
+    break;
+}
+
 //get id
     cout << "ID: ";
     cin >> newNode->id;
@@ -49,7 +63,7 @@ void fillNodeData(Student* newNode)
     newNode->department = getDepartment();
     cin.ignore();
 
-    cout << "Grade: ";
-    cin >> newNode->grade;
+    cout << "CGPA: ";
+    cin >> newNode->CGPA;
     cin.ignore();
 }

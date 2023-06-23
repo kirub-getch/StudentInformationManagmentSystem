@@ -10,12 +10,12 @@ int main()
     static int choice;
     static string targetName;
 
-    Student*s1 = new Student{"Kirubel","Wondwosen","Getachew","1309135","2010","kirub@gmail.com","0930630075","Computer Engineering",3.6,NULL};
-     Student*s2 = new Student{"Tsigemariyam","Mola","Bayew","1303192","2012","Tsigemariyam@gmail.com","0930630075","Computer Engineering",3.6,NULL};
-     Student*s3 = new Student{"Biniyam","Germa","Tefera","1303193","2011","Biniyam@gmail.com","0930630075","Computer Engineering",3.6,NULL};
-     Student*s4 = new Student{"Haileyesus","Sleshi","Berihun","1303194","2016","Haileyesus@gmail.com","0930630075","Computer Engineering",3.6,NULL};
-     Student*s5 = new Student{"Abel","Sisay","Tigabu","1303195","2014","Abel@gmail.com","0930630075","Computer Engineering",3.6,NULL};
-     Student*s6 = new Student{"Mintesnot","Desta","Abuye","1403456","2015","Mintesnot@gmail.com","0930630075","Computer Engineering",3.6,NULL}; 
+    Student*s1 = new Student{"Kirubel","Wondwosen","Getachew","1309135","2010","kirub@gmail.com","0930630075","Computer Engineering",3.6,MALE,NULL};
+     Student*s2 = new Student{"Tsigemariyam","Mola","Bayew","1303192","2012","Tsigemariyam@gmail.com","0930630075","Computer Engineering",3.6,MALE,NULL};
+     Student*s3 = new Student{"Biniyam","Germa","Tefera","1303193","2011","Biniyam@gmail.com","0930630075","Computer Engineering",3.6,MALE,NULL};
+     Student*s4 = new Student{"Haileyesus","Sleshi","Berihun","1303194","2016","Haileyesus@gmail.com","0930630075","Computer Engineering",3.6,MALE,NULL};
+     Student*s5 = new Student{"Abel","Sisay","Tigabu","1303195","2014","Abel@gmail.com","0930630075","Computer Engineering",3.6,MALE,NULL};
+     Student*s6 = new Student{"Mintesnot","Desta","Abuye","1403456","2015","Mintesnot@gmail.com","0930630075","Computer Engineering",3.6,MALE,NULL}; 
      
     head = s1; 
     s1->next = s2;
