@@ -16,13 +16,14 @@ int main()
      Student*s4 = new Student{"Haileyesus","Sleshi","Berihun","1303194","2016","Haileyesus@gmail.com","0930630075","Computer Engineering",3.6,MALE,NULL};
      Student*s5 = new Student{"Abel","Sisay","Tigabu","1303195","2014","Abel@gmail.com","0930630075","Computer Engineering",3.6,MALE,NULL};
      Student*s6 = new Student{"Mintesnot","Desta","Abuye","1403456","2015","Mintesnot@gmail.com","0930630075","Computer Engineering",3.6,MALE,NULL}; 
-     
+     Student*s7 = new Student{"Samson","Mamuye","Add","1307708","2013","samson@gmail.com","0945673299","Computer Engineering",3.6,MALE,NULL};
     head = s1; 
     s1->next = s2;
     s2->next = s3;
     s3->next = s4;
     s4->next = s5;
     s5->next = s6;
+    s6->next = s7;
    
    
     

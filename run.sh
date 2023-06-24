@@ -1,4 +1,6 @@
 #!/bin/bash
+
 g++ -c *.cpp
-g++ -o home *.o
+mv *.o object/
+g++ object/*.o -o home
 ./home 
